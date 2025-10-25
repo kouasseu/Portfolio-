@@ -1,0 +1,724 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Architecte Infrastructure et Cybersécurité IAM Portfolio</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="29427f40-92fb-80d9-81fe-cf554d595988" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.1.0&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 48.8%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">💻</span></div><h1 class="page-title">Architecte Infrastructure et Cybersécurité IAM Portfolio</h1><p class="page-description"></p></header><div class="page-body"><div id="29427f40-92fb-81a5-8a64-f08a7b179253" class="column-list"><div id="29427f40-92fb-814d-9f4d-e50afdb85849" style="width:106.25%" class="column"><figure class="block-color-yellow_background callout" style="white-space:pre-wrap;display:flex" id="29427f40-92fb-81df-b73c-fe3b4e1d734e"><div style="width:100%"><p id="29427f40-92fb-81f3-9e52-d5895898c7d8" class=""><strong>Salut, moi c’est Vladimir DJAMENI KOUASSEU</strong></p></div></figure><div><p id="29427f40-92fb-8041-aedd-fb288e29db21" class="">
+</p></div></div><div id="29427f40-92fb-81f8-810a-f4d9eea7a87a" style="width:31.249999999999993%" class="column"><figure id="29427f40-92fb-8114-8314-c861847a2f2e" class="image" style="text-align:center"><a href="vlad1.jpeg"><img style="width:240px" src="vlad1.jpeg"/></a></figure><p id="29427f40-92fb-805d-b6d1-ca5b22a83947" class="">
+</p></div></div><hr id="29427f40-92fb-8196-863e-c9cf066d2b13"/><hr id="29427f40-92fb-81b4-9d87-c8a1cf3be146"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="29427f40-92fb-8155-8980-f563e439346a"><div style="font-size:1.5em"><img class="icon" src="Capture_decran_2025-09-26_a_15.54.50.png"/></div><div style="width:100%"><div id="29427f40-92fb-8183-bd3c-c3a73a1601a9" class="column-list"><div id="29427f40-92fb-8171-9b31-e7dc920b352c" style="width:50%" class="column"><p id="29427f40-92fb-8152-a672-e3dc51a514c2" class="">
+</p><p id="29427f40-92fb-80d7-b569-f9f0c16b0374" class="">
+</p><p id="29527f40-92fb-80a8-a86f-f0c25cb5942b" class="">
+</p><figure id="29427f40-92fb-8111-aa82-d2fbad586160" class="image" style="text-align:left"><a href="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-4.1.0&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb"><img style="width:192px" src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-4.1.0&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb"/></a></figure><p id="29527f40-92fb-8080-9f99-dba25a46a27b" class="">
+</p></div><div id="29427f40-92fb-811c-bf49-e3924fdf5663" style="width:93.75%" class="column"><h1 id="29427f40-92fb-8125-8560-f9f304646913" class="">🚀 <em>“</em><em><strong>j’accompagne les organisations dans la sécurisation de leurs accès, identités et la construction des environnements critiques</strong></em><em>”</em></h1><hr id="29427f40-92fb-8146-adc6-d734bc0aeda8"/><blockquote id="29427f40-92fb-815f-9859-fb6389d95625" class="quote-large"><em><strong>Consultant en infrastructure IT et cybersécurité, certifié Wallix, VMware, Linux, stockage et ITIL, j’accompagne les organisations dans la sécurisation de leurs accès, identités et environnements critiques. Mon expertise couvre l’IAM, la virtualisation (incluant Kubernetes), le stockage (bloc et fichier) et l’administration système Linux, avec une approche rigoureuse orientée conformité, performance et résilience.”</strong></em><p id="29427f40-92fb-81db-96c4-d3cd2e3227a5" class=""><br/><strong>🎯 Mon objectif : vous faire gagner du temps, de la fluidité et de la sérénité dans vos projets.</strong></p></blockquote><p id="29427f40-92fb-81fa-937c-e0cc7538a41f" class="">
+</p></div></div></div></figure><hr id="29427f40-92fb-819b-a8ee-e518d9575605"/><p id="29427f40-92fb-8118-a086-fbe7baef0b77" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="29427f40-92fb-81b9-9421-c588e7e48217"><div style="font-size:1.5em"><span class="icon">💬</span></div><div style="width:100%"><h2 id="29427f40-92fb-810d-a675-c18723dd5aaf" class=""><em>“Chaque projet est une nouvelle aventure. Voici quelques réalisations récentes qui illustrent mon approche et mon expertise.”</em></h2></div></figure><p id="29427f40-92fb-81d2-8900-c6224c5f3e73" class="">
+</p><div id="29427f40-92fb-813a-9b08-e3137907f679" class="collection-content"><h4 class="collection-title">Les projets</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><img src="https://www.notion.so/icons/font_gray.svg" style="width:14px;height:14px;display:block"/></span>Nom du projet</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Type de projet</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/link_gray.svg" style="width:14px;height:14px;display:block"/></span>Lien du projet</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Client </th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/user-circle_gray.svg" style="width:14px;height:14px;display:block"/></span>Créée par</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Date de début</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Description</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/map-pin-alternate_gray.svg" style="width:14px;height:14px;display:block"/></span>Lieu</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/friends_gray.svg" style="width:14px;height:14px;display:block"/></span>Membre équipe projet </th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/friends_gray.svg" style="width:14px;height:14px;display:block"/></span>Responsable du projet</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/burst_gray.svg" style="width:14px;height:14px;display:block"/></span>État</th></tr></thead><tbody><tr id="29727f40-92fb-8082-afe8-d419333a46ee"><td class="cell-title"><a href="ADC%20SA%20%E2%80%93%20Refonte%20de%20l%E2%80%99infrastructure%20IT%20des%20A%C3%A9ropo%2029727f4092fb8082afe8d419333a46ee.html"><span class="icon">🚀</span>ADC.SA – Refonte de l’infrastructure IT des Aéroports du Cameroun</a></td><td class="cell-AWGp"><span class="selected-value select-value-color-yellow">Communication</span><span class="selected-value select-value-color-brown">HA</span><span class="selected-value select-value-color-pink">PRA</span><span class="selected-value select-value-color-orange">infrastructure</span></td><td class="cell-]]JQ"></td><td class="cell-~TaE"><mark class="highlight-teal"><strong>ADC.SA</strong></mark></td><td class="cell-sUpl"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-|p^j"><time>@7 mai 2019 → 1 septembre 2019</time></td><td class="cell-VAYk"><br/>Moderniser l’infrastructure informatique des <strong>Aéroports du Cameroun (ADC.SA)</strong> en refondant les sites <strong>de production (Yaoundé)</strong> et <strong>de secours (Douala)</strong>. L’objectif principal était d’assurer la <strong>résilience</strong>, la <strong>scalabilité</strong>, et la <strong>sécurisation des données</strong>, tout en facilitant la migration vers une architecture virtualisée et redondante.<br/><br/></td><td class="cell-_dqe">Yaoundé, Cameroun</td><td class="cell-&gt;Kv{"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-NMDT"></td><td class="cell-R_Qy"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Terminé</span></td></tr><tr id="29427f40-92fb-8128-95b3-dec0adabf37d"><td class="cell-title"><a href="ABBA-ZDE%20DMZ%20%E2%80%93%20S%C3%A9curisation%20des%20comptes%20%C3%A0%20privil%C3%A8g%2029427f4092fb812895b3dec0adabf37d.html"><span class="icon">🆎</span>ABBA-ZDE/DMZ – Sécurisation des comptes à privilèges</a></td><td class="cell-AWGp"><span class="selected-value select-value-color-green">IAM</span><span class="selected-value select-value-color-orange">PAM</span><span class="selected-value select-value-color-purple">WALLIX PAM</span></td><td class="cell-]]JQ"><a href="https://www.wallix.com/fr/produits/gestion-des-acces-a-privileges/" class="url-value">https://www.wallix.com/fr/produits/gestion-des-acces-a-privileges/</a></td><td class="cell-~TaE"><mark class="highlight-blue"><strong>ENEDIS</strong></mark></td><td class="cell-sUpl"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-|p^j"><time>@2 novembre 2023 → 2 mars 2024</time></td><td class="cell-VAYk"><br/>Renforcer la sécurité des comptes à privilèges sur les machines Windows situées en zone démilitarisée (ZDE/DMZ), via le déploiement d’une infrastructure PAM basée sur <strong>Wallix Bastion</strong>, dans une démarche <strong>Zero Trust</strong>. L’objectif principal : limiter les risques d’accès non autorisés et garantir une traçabilité exhaustive des actions administratives.<br/><br/></td><td class="cell-_dqe">Lyon, Auvergne-Rhône-Alpes, France</td><td class="cell-&gt;Kv{"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-NMDT"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-R_Qy"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Terminé</span></td></tr><tr id="29427f40-92fb-81cb-83f7-ef223ca7e743"><td class="cell-title"><a href="ABBA2-S%C3%A9curisation%20des%20acc%C3%A8s%20TMA%2029427f4092fb81cb83f7ef223ca7e743.html"><span class="icon">🆎</span>ABBA2-Sécurisation des accès TMA</a></td><td class="cell-AWGp"><span class="selected-value select-value-color-green">IAM</span><span class="selected-value select-value-color-orange">PAM</span><span class="selected-value select-value-color-purple">WALLIX PAM</span></td><td class="cell-]]JQ"><a href="https://www.behance.net/gallery/234030257/Food-Delivery-Mobile-App-Quick-Fork?tracking_source=search_projects|app&amp;l=48" class="url-value">https://www.behance.net/gallery/234030257/Food-Delivery-Mobile-App-Quick-Fork?tracking_source=search_projects|app&amp;l=48</a></td><td class="cell-~TaE"><mark class="highlight-blue"><strong>ENEDIS</strong></mark></td><td class="cell-sUpl"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-|p^j"><time>@7 mars 2024 → 20 novembre 2024</time></td><td class="cell-VAYk">Mettre en place une solution robuste de sécurisation des accès pour les prestataires externes en Tierce Maintenance Applicative (TMA), garantissant un contrôle strict et granulaire des connexions vers les équipes internes de l’organisation<strong>.                                                     </strong></td><td class="cell-_dqe">Lyon, Auvergne-Rhône-Alpes, France</td><td class="cell-&gt;Kv{"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-NMDT"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-R_Qy"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Terminé</span></td></tr><tr id="29427f40-92fb-81bb-90c5-ffc584dc79e8"><td class="cell-title"><a href="WAM%20SSO%20%E2%80%93%20Refonte%20de%20la%20plateforme%20d%E2%80%99authentificat%2029427f4092fb81bb90c5ffc584dc79e8.html"><span class="icon">👁️</span>WAM SSO – Refonte de la plateforme d’authentification centralisée avec monitoring SafeKit</a></td><td class="cell-AWGp"><span class="selected-value select-value-color-yellow">Communication</span><span class="selected-value select-value-color-green">IAM</span><span class="selected-value select-value-color-gray">SSO</span></td><td class="cell-]]JQ"><a href="https://www.evidian.com/fr/produits/web-sso/web-access-manager-cas-d-usage/" class="url-value">https://www.evidian.com/fr/produits/web-sso/web-access-manager-cas-d-usage/</a></td><td class="cell-~TaE"><mark class="highlight-orange"><strong>ORANGE CAMEOUN.SA</strong></mark></td><td class="cell-sUpl"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-|p^j"></td><td class="cell-VAYk"><br/>Refondre la plateforme <strong>SSO (Single Sign-On)</strong> basée sur <strong>Evidian Web Access Manager (WAM)</strong> pour <strong>Orange Cameroun</strong>, afin de centraliser et sécuriser l’authentification à l’ensemble des applications métiers (CRM, Vue360). Le projet intègre <strong>ADFS comme fournisseur d’identité (IdP)</strong> via <strong>SAML v2</strong>, et s’appuie sur le module <strong>SafeKit</strong> pour assurer la <strong>haute disponibilité</strong>, la <strong>réplication</strong> et le <strong>monitoring du cluster WAM</strong></td><td class="cell-_dqe">Douala, Cameroun</td><td class="cell-&gt;Kv{"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-NMDT"></td><td class="cell-R_Qy"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Terminé</span></td></tr><tr id="29427f40-92fb-80ad-8f2f-f1e14f4a7583"><td class="cell-title"><a href="KPSA%20%E2%80%93%20Cluster%20Haute%20Disponibilit%C3%A9%20avec%20Pacemaker%20%2029427f4092fb80ad8f2ff1e14f4a7583.html"><span class="icon">🚀</span>KPSA – Cluster Haute Disponibilité avec Pacemaker/Corosync                           </a></td><td class="cell-AWGp"><span class="selected-value select-value-color-yellow">Communication</span><span class="selected-value select-value-color-brown">HA</span><span class="selected-value select-value-color-green">Middleware</span></td><td class="cell-]]JQ"><a href="https://github.com/kouasseu/KPSA/tree/main" class="url-value">https://github.com/kouasseu/KPSA/tree/main</a></td><td class="cell-~TaE"><mark class="highlight-red">ORANGE CAMEROUN.SA</mark></td><td class="cell-sUpl"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-|p^j"></td><td class="cell-VAYk"><br/><br/>Mettre en place une infrastructure <strong>Haute Disponibilité (HA)</strong> pour l’application <strong>KPSA (Kabira Provisioning and Service Activation)</strong>, utilisée dans le secteur des télécommunications pour le provisioning des cartes SIM. Le projet vise à garantir la <strong>résilience du site de production</strong> et à construire un <strong>site de reprise (DR)</strong> en mode <strong>single node</strong>, assurant la continuité de service en cas de défaillance.<br/><br/><br/></td><td class="cell-_dqe">Douala, Cameroun</td><td class="cell-&gt;Kv{"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-NMDT"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-R_Qy"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Terminé</span></td></tr><tr id="29427f40-92fb-8012-8eb5-d32b7d8506e6"><td class="cell-title"><a href="Kaabu%20Mobile%20%E2%80%93%20Plateforme%20de%20Commande%20Unifi%C3%A9e%20Mult%2029427f4092fb80128eb5d32b7d8506e6.html"><span class="icon">🚀</span>Kaabu Mobile – Plateforme de Commande Unifiée Multiservice</a></td><td class="cell-AWGp"><span class="selected-value select-value-color-yellow">Communication</span><span class="selected-value select-value-color-brown">HA</span><span class="selected-value select-value-color-green">Middleware</span><span class="selected-value select-value-color-orange">infrastructure</span></td><td class="cell-]]JQ"><a href="https://play.google.com/store/apps/details?id=com.orange.cm.kaabuplus&amp;hl=fr_CH" class="url-value">https://play.google.com/store/apps/details?id=com.orange.cm.kaabuplus&amp;hl=fr_CH</a></td><td class="cell-~TaE"><mark class="highlight-orange"><strong>Orange Group/CAMEROUN</strong></mark></td><td class="cell-sUpl"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-|p^j"></td><td class="cell-VAYk"><br/>Concevoir et déployer <strong>Kaabu Mobile</strong>, une plateforme digitale <strong>multiservice</strong> et <strong>multidevice</strong> dédiée à la <strong>prise de commande unifiée</strong>. Elle centralise l’ensemble des processus commerciaux et techniques autour d’un <strong>catalogue d’offres unique</strong>, d’un <strong>référentiel client unifié</strong>, et d’un <strong>billing convergent</strong>, tout en intégrant les fonctions clés : <strong>vente</strong>, <strong>stock</strong>, <strong>encaissement</strong>, <strong>recouvrement</strong> et <strong>provisioning</strong>.<br/><br/></td><td class="cell-_dqe">Douala, Cameroun</td><td class="cell-&gt;Kv{"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-NMDT"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-R_Qy"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Terminé</span></td></tr><tr id="29727f40-92fb-80ff-8143-f2c38c35555b"><td class="cell-title"><a href="OPC%20%E2%80%93%20Orange%20Private%20Cloud%2029727f4092fb80ff8143f2c38c35555b.html"><span class="icon">🚀</span> OPC – Orange Private Cloud</a></td><td class="cell-AWGp"><span class="selected-value select-value-color-red">CLOUD</span><span class="selected-value select-value-color-orange">infrastructure</span></td><td class="cell-]]JQ"></td><td class="cell-~TaE"><mark class="highlight-red"><strong>ORANGE GROUP</strong></mark></td><td class="cell-sUpl"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-|p^j"></td><td class="cell-VAYk"><br/>Participer à la mise en œuvre de la plateforme <strong>Orange Private Cloud (OPC)</strong>, une infrastructure cloud privée destinée à héberger des services critiques pour les entités du groupe Orange. Le projet vise à garantir la <strong>scalabilité</strong>, la <strong>résilience</strong> et la <strong>sécurité</strong> des environnements virtualisés, tout en respectant les standards d’architecture cloud.<br/><br/></td><td class="cell-_dqe">Douala, Cameroun</td><td class="cell-&gt;Kv{"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-NMDT"></td><td class="cell-R_Qy"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Terminé</span></td></tr><tr id="29727f40-92fb-80ff-b10c-e1e716465f7c"><td class="cell-title"><a href="AFA%20%E2%80%93%20D%C3%A9ploiement%20de%20l%E2%80%99infrastructure%20de%20stockage%20%2029727f4092fb80ffb10ce1e716465f7c.html"><span class="icon">🚀</span>AFA – Déploiement de l’infrastructure de stockage VMAX All Flash</a></td><td class="cell-AWGp"><span class="selected-value select-value-color-yellow">Communication</span><span class="selected-value select-value-color-red">Stockage</span><span class="selected-value select-value-color-orange">infrastructure</span><span class="selected-value select-value-color-blue">virtualisation</span></td><td class="cell-]]JQ"></td><td class="cell-~TaE"><mark class="highlight-orange"><strong>Orange Cameroun</strong></mark></td><td class="cell-sUpl"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-|p^j"><time>@25 octobre 2018</time></td><td class="cell-VAYk"><br/>Mettre en place une infrastructure de <strong>stockage haute performance</strong> basée sur la technologie <strong>VMAX All Flash</strong> pour <strong>Orange Cameroun</strong>, afin de répondre aux besoins croissants en capacité, en rapidité d’accès aux données, et en résilience. Le projet visait également à <strong>étendre l’infrastructure de virtualisation</strong> existante pour supporter les charges critiques.<br/><br/></td><td class="cell-_dqe">Douala, Cameroun</td><td class="cell-&gt;Kv{"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-NMDT"></td><td class="cell-R_Qy"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Terminé</span></td></tr><tr id="29727f40-92fb-8063-9a2d-ec4c1175f92a"><td class="cell-title"><a href="Huawei%20Dorado%20%E2%80%93%20Modernisation%20du%20stockage%20avec%20bai%2029727f4092fb80639a2dec4c1175f92a.html"><span class="icon">🚀</span>Huawei Dorado – Modernisation du stockage avec baies All Flash NVMe</a></td><td class="cell-AWGp"><span class="selected-value select-value-color-green">Migration</span><span class="selected-value select-value-color-red">Stockage</span><span class="selected-value select-value-color-blue">virtualisation</span></td><td class="cell-]]JQ"></td><td class="cell-~TaE"><mark class="highlight-red"><strong>ORANGE CAMEROUN</strong></mark></td><td class="cell-sUpl"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-|p^j"></td><td class="cell-VAYk"><br/>Moderniser l’infrastructure de stockage d’<strong>Orange Cameroun (OCM)</strong> en déployant des <strong>baies Dorado All Flash NVMe</strong>, afin de remplacer les équipements en fin de vie (EOS) et de réduire la saturation des ressources existantes. Le projet vise une <strong>migration sans interruption</strong>, une <strong>intégration fluide</strong> dans l’environnement existant, et une <strong>montée en compétence</strong> des équipes locales.<br/><br/></td><td class="cell-_dqe">Douala, Cameroun</td><td class="cell-&gt;Kv{"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-NMDT"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-R_Qy"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Terminé</span></td></tr><tr id="29727f40-92fb-8033-94e7-dead180f20bc"><td class="cell-title"><a href="OceanStor%20%E2%80%93%20D%C3%A9ploiement%20des%20baies%20de%20stockage%20Huaw%2029727f4092fb803394e7dead180f20bc.html"><span class="icon">🚀</span> OceanStor – Déploiement des baies de stockage Huawei pour le SAN de  Production et l’archivage</a></td><td class="cell-AWGp"><span class="selected-value select-value-color-yellow">Communication</span><span class="selected-value select-value-color-red">Stockage</span><span class="selected-value select-value-color-blue">virtualisation</span></td><td class="cell-]]JQ"></td><td class="cell-~TaE"><mark class="highlight-yellow_background"><strong>MTN CAMEROUN.SA</strong></mark></td><td class="cell-sUpl"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-|p^j"></td><td class="cell-VAYk">Renforcer l’infrastructure de stockage d’<strong>MTN CAMEROUN </strong>en déployant deux nouvelles baies Huawei :<br/>• <strong>Huawei OceanStor 6800 All Flash</strong> pour les environnements de <strong>production haute performance</strong><br/>• <strong>Huawei OceanStor 9000</strong> pour la <strong>gestion de l’archivage</strong> à grande capacité<br/>Le projet vise à améliorer les performances, la résilience et la capacité globale de stockage, tout en assurant une intégration fluide dans l’environnement existant.</td><td class="cell-_dqe">Douala, Cameroun</td><td class="cell-&gt;Kv{"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-NMDT"></td><td class="cell-R_Qy"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Terminé</span></td></tr><tr id="29727f40-92fb-8014-8133-cb1fae743838"><td class="cell-title"><a href="Projet%20SAN%20Expansion%20%E2%80%93%20Extension%20de%20capacit%C3%A9%20sur%20b%2029727f4092fb80148133cb1fae743838.html"><span class="icon">🚀</span>Projet SAN Expansion – Extension de capacité sur baies VMAX10K</a></td><td class="cell-AWGp"><span class="selected-value select-value-color-yellow">Communication</span><span class="selected-value select-value-color-red">Stockage</span></td><td class="cell-]]JQ"></td><td class="cell-~TaE"><mark class="highlight-orange"><strong>MTN CAMEROUN</strong></mark></td><td class="cell-sUpl"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-|p^j"></td><td class="cell-VAYk"><br/>Étendre la capacité de stockage des <strong>baies Dell EMC VMAX10K</strong> dans l’environnement SAN de <strong>MTN Cameroun</strong>, afin de répondre à la croissance des besoins métiers et d’optimiser l’utilisation des pools de stockage existants. Le projet visait une <strong>expansion sans interruption</strong>, avec reconfiguration fine des composants internes.</td><td class="cell-_dqe">Douala, Cameroun</td><td class="cell-&gt;Kv{"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-NMDT"></td><td class="cell-R_Qy"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Terminé</span></td></tr><tr id="29727f40-92fb-8096-8f07-f34f944ea369"><td class="cell-title"><a href="Wallix%20Bastion%20%E2%80%93%20Refonte%20de%20l%E2%80%99infrastructure%20d%E2%80%99acc%2029727f4092fb80968f07f34f944ea369.html"><span class="icon">🚀</span>Wallix Bastion – Refonte de l’infrastructure d’accès sécurisé pour les prestataires externes</a></td><td class="cell-AWGp"><span class="selected-value select-value-color-green">IAM</span><span class="selected-value select-value-color-orange">PAM</span><span class="selected-value select-value-color-purple">WALLIX PAM</span></td><td class="cell-]]JQ"></td><td class="cell-~TaE"><mark class="highlight-orange">ORANGE CAMEROUN</mark></td><td class="cell-sUpl"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-|p^j"></td><td class="cell-VAYk"><br/>Moderniser la solution de <strong>gestion des accès à privilèges (PAM)</strong> pour les <strong>prestataires externes</strong> d’<strong>Orange Cameroun</strong>, en déployant la <strong>version 8 de Wallix Bastion</strong> et en intégrant le module <strong>Access Manager (AM) 2.1</strong> pour une <strong>interface centralisée</strong> de supervision et de gestion des accès. Le projet vise à renforcer la sécurité, améliorer la traçabilité, et faciliter l’administration des bastions.<br/><br/></td><td class="cell-_dqe">Douala, Cameroun</td><td class="cell-&gt;Kv{"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-NMDT"></td><td class="cell-R_Qy"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Terminé</span></td></tr></tbody></table><br/><br/></div><p id="29427f40-92fb-8054-809b-cbf645c4df91" class="">
+</p><p id="29427f40-92fb-81ce-a03b-dcc2a414bb63" class="">
+</p><hr id="29427f40-92fb-81ca-ac58-f6f86c3fbfcd"/><div><div id="29427f40-92fb-817a-a986-c27b7ec84195" class="column-list"><div id="29427f40-92fb-8101-b3eb-d8cb276f3675" style="width:79.16666666666667%" class="column"><h2 id="29427f40-92fb-81cf-b330-deb43e33be2f" class=""><mark class="highlight-yellow_background">👩‍💻 Alors on travail ensemble ?<br/>📞 Discutons-en !</mark></h2><p id="29727f40-92fb-80c6-b1e7-eb5c1ab2aaf7" class="">
+</p><p id="29727f40-92fb-80c5-a3ca-cac608ec7648" class="">
+</p><figure id="29727f40-92fb-800f-9384-d8fdb1676fa3"><div class="source"><a href="https://calendly.com/kouasseu2016/30min">https://calendly.com/kouasseu2016/30min</a></div></figure></div><div id="29727f40-92fb-80c8-9a60-e471a1c67431" style="width:4.166666666666666%" class="column"><p id="29727f40-92fb-804d-ab6c-fc7a91cf8192" class="">
+</p></div><div id="29427f40-92fb-8190-9824-e020f113289b" style="width:83.33333333333333%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="29427f40-92fb-8108-b8d8-ca860252417f"><div style="width:100%"></div></figure><figure id="29727f40-92fb-802f-83a4-dd0b73d00023" class="image"><a href="image.png"><img style="width:44px" src="image.png"/></a></figure><p id="29427f40-92fb-8019-879c-f0b4bfc6891e" class="">
+</p></div></div><figure id="29427f40-92fb-8103-abcb-ef7eaa2decbe"><div class="source"><a href="https://calendly.com/">https://calendly.com/</a></div></figure></div><p id="29427f40-92fb-819d-9110-c04838b5d229" class="">
+</p><hr id="29427f40-92fb-81d9-bbce-c95fb116ef88"/><div id="29427f40-92fb-817d-b333-da2b19f73fa3" class="column-list"><div id="29427f40-92fb-81bf-8cc1-f3d946653900" style="width:6.25%" class="column"><p id="29427f40-92fb-8128-b5c0-c162498c4007" class="">
+</p></div><div id="29427f40-92fb-8146-8d0e-cbdf14a56b65" style="width:100%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="29427f40-92fb-81dd-842d-edf8f8ab6c5f"><div style="font-size:1.5em"><img class="icon notion-static-icon" src="https://www.notion.so/icons/list-indent_lightgray.svg"/></div><div style="width:100%"><p id="29427f40-92fb-8158-811d-c477efd357f0" class=""><a href="Architecte%20Infrastructure%20et%20Cybers%C3%A9curit%C3%A9%20IAM%20Por%2029427f4092fb80d981fecf554d595988.html"><span class="icon">💻</span>Architecte Infrastructure et Cybersécurité IAM Portfolio</a> </p><div id="29427f40-92fb-813a-9b08-e3137907f679" class="collection-content"><h4 class="collection-title">Les projets</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><img src="https://www.notion.so/icons/font_gray.svg" style="width:14px;height:14px;display:block"/></span>Nom du projet</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Type de projet</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/link_gray.svg" style="width:14px;height:14px;display:block"/></span>Lien du projet</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Client </th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/user-circle_gray.svg" style="width:14px;height:14px;display:block"/></span>Créée par</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Date de début</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Description</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/map-pin-alternate_gray.svg" style="width:14px;height:14px;display:block"/></span>Lieu</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/friends_gray.svg" style="width:14px;height:14px;display:block"/></span>Membre équipe projet </th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/friends_gray.svg" style="width:14px;height:14px;display:block"/></span>Responsable du projet</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/burst_gray.svg" style="width:14px;height:14px;display:block"/></span>État</th></tr></thead><tbody><tr id="29727f40-92fb-8082-afe8-d419333a46ee"><td class="cell-title"><a href="ADC%20SA%20%E2%80%93%20Refonte%20de%20l%E2%80%99infrastructure%20IT%20des%20A%C3%A9ropo%2029727f4092fb8082afe8d419333a46ee.html"><span class="icon">🚀</span>ADC.SA – Refonte de l’infrastructure IT des Aéroports du Cameroun</a></td><td class="cell-AWGp"><span class="selected-value select-value-color-yellow">Communication</span><span class="selected-value select-value-color-brown">HA</span><span class="selected-value select-value-color-pink">PRA</span><span class="selected-value select-value-color-orange">infrastructure</span></td><td class="cell-]]JQ"></td><td class="cell-~TaE"><mark class="highlight-teal"><strong>ADC.SA</strong></mark></td><td class="cell-sUpl"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-|p^j"><time>@7 mai 2019 → 1 septembre 2019</time></td><td class="cell-VAYk"><br/>Moderniser l’infrastructure informatique des <strong>Aéroports du Cameroun (ADC.SA)</strong> en refondant les sites <strong>de production (Yaoundé)</strong> et <strong>de secours (Douala)</strong>. L’objectif principal était d’assurer la <strong>résilience</strong>, la <strong>scalabilité</strong>, et la <strong>sécurisation des données</strong>, tout en facilitant la migration vers une architecture virtualisée et redondante.<br/><br/></td><td class="cell-_dqe">Yaoundé, Cameroun</td><td class="cell-&gt;Kv{"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-NMDT"></td><td class="cell-R_Qy"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Terminé</span></td></tr><tr id="29427f40-92fb-8128-95b3-dec0adabf37d"><td class="cell-title"><a href="ABBA-ZDE%20DMZ%20%E2%80%93%20S%C3%A9curisation%20des%20comptes%20%C3%A0%20privil%C3%A8g%2029427f4092fb812895b3dec0adabf37d.html"><span class="icon">🆎</span>ABBA-ZDE/DMZ – Sécurisation des comptes à privilèges</a></td><td class="cell-AWGp"><span class="selected-value select-value-color-green">IAM</span><span class="selected-value select-value-color-orange">PAM</span><span class="selected-value select-value-color-purple">WALLIX PAM</span></td><td class="cell-]]JQ"><a href="https://www.wallix.com/fr/produits/gestion-des-acces-a-privileges/" class="url-value">https://www.wallix.com/fr/produits/gestion-des-acces-a-privileges/</a></td><td class="cell-~TaE"><mark class="highlight-blue"><strong>ENEDIS</strong></mark></td><td class="cell-sUpl"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-|p^j"><time>@2 novembre 2023 → 2 mars 2024</time></td><td class="cell-VAYk"><br/>Renforcer la sécurité des comptes à privilèges sur les machines Windows situées en zone démilitarisée (ZDE/DMZ), via le déploiement d’une infrastructure PAM basée sur <strong>Wallix Bastion</strong>, dans une démarche <strong>Zero Trust</strong>. L’objectif principal : limiter les risques d’accès non autorisés et garantir une traçabilité exhaustive des actions administratives.<br/><br/></td><td class="cell-_dqe">Lyon, Auvergne-Rhône-Alpes, France</td><td class="cell-&gt;Kv{"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-NMDT"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-R_Qy"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Terminé</span></td></tr><tr id="29427f40-92fb-81cb-83f7-ef223ca7e743"><td class="cell-title"><a href="ABBA2-S%C3%A9curisation%20des%20acc%C3%A8s%20TMA%2029427f4092fb81cb83f7ef223ca7e743.html"><span class="icon">🆎</span>ABBA2-Sécurisation des accès TMA</a></td><td class="cell-AWGp"><span class="selected-value select-value-color-green">IAM</span><span class="selected-value select-value-color-orange">PAM</span><span class="selected-value select-value-color-purple">WALLIX PAM</span></td><td class="cell-]]JQ"><a href="https://www.behance.net/gallery/234030257/Food-Delivery-Mobile-App-Quick-Fork?tracking_source=search_projects|app&amp;l=48" class="url-value">https://www.behance.net/gallery/234030257/Food-Delivery-Mobile-App-Quick-Fork?tracking_source=search_projects|app&amp;l=48</a></td><td class="cell-~TaE"><mark class="highlight-blue"><strong>ENEDIS</strong></mark></td><td class="cell-sUpl"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-|p^j"><time>@7 mars 2024 → 20 novembre 2024</time></td><td class="cell-VAYk">Mettre en place une solution robuste de sécurisation des accès pour les prestataires externes en Tierce Maintenance Applicative (TMA), garantissant un contrôle strict et granulaire des connexions vers les équipes internes de l’organisation<strong>.                                                     </strong></td><td class="cell-_dqe">Lyon, Auvergne-Rhône-Alpes, France</td><td class="cell-&gt;Kv{"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-NMDT"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-R_Qy"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Terminé</span></td></tr><tr id="29427f40-92fb-81bb-90c5-ffc584dc79e8"><td class="cell-title"><a href="WAM%20SSO%20%E2%80%93%20Refonte%20de%20la%20plateforme%20d%E2%80%99authentificat%2029427f4092fb81bb90c5ffc584dc79e8.html"><span class="icon">👁️</span>WAM SSO – Refonte de la plateforme d’authentification centralisée avec monitoring SafeKit</a></td><td class="cell-AWGp"><span class="selected-value select-value-color-yellow">Communication</span><span class="selected-value select-value-color-green">IAM</span><span class="selected-value select-value-color-gray">SSO</span></td><td class="cell-]]JQ"><a href="https://www.evidian.com/fr/produits/web-sso/web-access-manager-cas-d-usage/" class="url-value">https://www.evidian.com/fr/produits/web-sso/web-access-manager-cas-d-usage/</a></td><td class="cell-~TaE"><mark class="highlight-orange"><strong>ORANGE CAMEOUN.SA</strong></mark></td><td class="cell-sUpl"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-|p^j"></td><td class="cell-VAYk"><br/>Refondre la plateforme <strong>SSO (Single Sign-On)</strong> basée sur <strong>Evidian Web Access Manager (WAM)</strong> pour <strong>Orange Cameroun</strong>, afin de centraliser et sécuriser l’authentification à l’ensemble des applications métiers (CRM, Vue360). Le projet intègre <strong>ADFS comme fournisseur d’identité (IdP)</strong> via <strong>SAML v2</strong>, et s’appuie sur le module <strong>SafeKit</strong> pour assurer la <strong>haute disponibilité</strong>, la <strong>réplication</strong> et le <strong>monitoring du cluster WAM</strong></td><td class="cell-_dqe">Douala, Cameroun</td><td class="cell-&gt;Kv{"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-NMDT"></td><td class="cell-R_Qy"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Terminé</span></td></tr><tr id="29427f40-92fb-80ad-8f2f-f1e14f4a7583"><td class="cell-title"><a href="KPSA%20%E2%80%93%20Cluster%20Haute%20Disponibilit%C3%A9%20avec%20Pacemaker%20%2029427f4092fb80ad8f2ff1e14f4a7583.html"><span class="icon">🚀</span>KPSA – Cluster Haute Disponibilité avec Pacemaker/Corosync                           </a></td><td class="cell-AWGp"><span class="selected-value select-value-color-yellow">Communication</span><span class="selected-value select-value-color-brown">HA</span><span class="selected-value select-value-color-green">Middleware</span></td><td class="cell-]]JQ"><a href="https://github.com/kouasseu/KPSA/tree/main" class="url-value">https://github.com/kouasseu/KPSA/tree/main</a></td><td class="cell-~TaE"><mark class="highlight-red">ORANGE CAMEROUN.SA</mark></td><td class="cell-sUpl"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-|p^j"></td><td class="cell-VAYk"><br/><br/>Mettre en place une infrastructure <strong>Haute Disponibilité (HA)</strong> pour l’application <strong>KPSA (Kabira Provisioning and Service Activation)</strong>, utilisée dans le secteur des télécommunications pour le provisioning des cartes SIM. Le projet vise à garantir la <strong>résilience du site de production</strong> et à construire un <strong>site de reprise (DR)</strong> en mode <strong>single node</strong>, assurant la continuité de service en cas de défaillance.<br/><br/><br/></td><td class="cell-_dqe">Douala, Cameroun</td><td class="cell-&gt;Kv{"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-NMDT"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-R_Qy"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Terminé</span></td></tr><tr id="29427f40-92fb-8012-8eb5-d32b7d8506e6"><td class="cell-title"><a href="Kaabu%20Mobile%20%E2%80%93%20Plateforme%20de%20Commande%20Unifi%C3%A9e%20Mult%2029427f4092fb80128eb5d32b7d8506e6.html"><span class="icon">🚀</span>Kaabu Mobile – Plateforme de Commande Unifiée Multiservice</a></td><td class="cell-AWGp"><span class="selected-value select-value-color-yellow">Communication</span><span class="selected-value select-value-color-brown">HA</span><span class="selected-value select-value-color-green">Middleware</span><span class="selected-value select-value-color-orange">infrastructure</span></td><td class="cell-]]JQ"><a href="https://play.google.com/store/apps/details?id=com.orange.cm.kaabuplus&amp;hl=fr_CH" class="url-value">https://play.google.com/store/apps/details?id=com.orange.cm.kaabuplus&amp;hl=fr_CH</a></td><td class="cell-~TaE"><mark class="highlight-orange"><strong>Orange Group/CAMEROUN</strong></mark></td><td class="cell-sUpl"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-|p^j"></td><td class="cell-VAYk"><br/>Concevoir et déployer <strong>Kaabu Mobile</strong>, une plateforme digitale <strong>multiservice</strong> et <strong>multidevice</strong> dédiée à la <strong>prise de commande unifiée</strong>. Elle centralise l’ensemble des processus commerciaux et techniques autour d’un <strong>catalogue d’offres unique</strong>, d’un <strong>référentiel client unifié</strong>, et d’un <strong>billing convergent</strong>, tout en intégrant les fonctions clés : <strong>vente</strong>, <strong>stock</strong>, <strong>encaissement</strong>, <strong>recouvrement</strong> et <strong>provisioning</strong>.<br/><br/></td><td class="cell-_dqe">Douala, Cameroun</td><td class="cell-&gt;Kv{"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-NMDT"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-R_Qy"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Terminé</span></td></tr><tr id="29727f40-92fb-80ff-8143-f2c38c35555b"><td class="cell-title"><a href="OPC%20%E2%80%93%20Orange%20Private%20Cloud%2029727f4092fb80ff8143f2c38c35555b.html"><span class="icon">🚀</span> OPC – Orange Private Cloud</a></td><td class="cell-AWGp"><span class="selected-value select-value-color-red">CLOUD</span><span class="selected-value select-value-color-orange">infrastructure</span></td><td class="cell-]]JQ"></td><td class="cell-~TaE"><mark class="highlight-red"><strong>ORANGE GROUP</strong></mark></td><td class="cell-sUpl"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-|p^j"></td><td class="cell-VAYk"><br/>Participer à la mise en œuvre de la plateforme <strong>Orange Private Cloud (OPC)</strong>, une infrastructure cloud privée destinée à héberger des services critiques pour les entités du groupe Orange. Le projet vise à garantir la <strong>scalabilité</strong>, la <strong>résilience</strong> et la <strong>sécurité</strong> des environnements virtualisés, tout en respectant les standards d’architecture cloud.<br/><br/></td><td class="cell-_dqe">Douala, Cameroun</td><td class="cell-&gt;Kv{"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-NMDT"></td><td class="cell-R_Qy"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Terminé</span></td></tr><tr id="29727f40-92fb-80ff-b10c-e1e716465f7c"><td class="cell-title"><a href="AFA%20%E2%80%93%20D%C3%A9ploiement%20de%20l%E2%80%99infrastructure%20de%20stockage%20%2029727f4092fb80ffb10ce1e716465f7c.html"><span class="icon">🚀</span>AFA – Déploiement de l’infrastructure de stockage VMAX All Flash</a></td><td class="cell-AWGp"><span class="selected-value select-value-color-yellow">Communication</span><span class="selected-value select-value-color-red">Stockage</span><span class="selected-value select-value-color-orange">infrastructure</span><span class="selected-value select-value-color-blue">virtualisation</span></td><td class="cell-]]JQ"></td><td class="cell-~TaE"><mark class="highlight-orange"><strong>Orange Cameroun</strong></mark></td><td class="cell-sUpl"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-|p^j"><time>@25 octobre 2018</time></td><td class="cell-VAYk"><br/>Mettre en place une infrastructure de <strong>stockage haute performance</strong> basée sur la technologie <strong>VMAX All Flash</strong> pour <strong>Orange Cameroun</strong>, afin de répondre aux besoins croissants en capacité, en rapidité d’accès aux données, et en résilience. Le projet visait également à <strong>étendre l’infrastructure de virtualisation</strong> existante pour supporter les charges critiques.<br/><br/></td><td class="cell-_dqe">Douala, Cameroun</td><td class="cell-&gt;Kv{"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-NMDT"></td><td class="cell-R_Qy"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Terminé</span></td></tr><tr id="29727f40-92fb-8063-9a2d-ec4c1175f92a"><td class="cell-title"><a href="Huawei%20Dorado%20%E2%80%93%20Modernisation%20du%20stockage%20avec%20bai%2029727f4092fb80639a2dec4c1175f92a.html"><span class="icon">🚀</span>Huawei Dorado – Modernisation du stockage avec baies All Flash NVMe</a></td><td class="cell-AWGp"><span class="selected-value select-value-color-green">Migration</span><span class="selected-value select-value-color-red">Stockage</span><span class="selected-value select-value-color-blue">virtualisation</span></td><td class="cell-]]JQ"></td><td class="cell-~TaE"><mark class="highlight-red"><strong>ORANGE CAMEROUN</strong></mark></td><td class="cell-sUpl"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-|p^j"></td><td class="cell-VAYk"><br/>Moderniser l’infrastructure de stockage d’<strong>Orange Cameroun (OCM)</strong> en déployant des <strong>baies Dorado All Flash NVMe</strong>, afin de remplacer les équipements en fin de vie (EOS) et de réduire la saturation des ressources existantes. Le projet vise une <strong>migration sans interruption</strong>, une <strong>intégration fluide</strong> dans l’environnement existant, et une <strong>montée en compétence</strong> des équipes locales.<br/><br/></td><td class="cell-_dqe">Douala, Cameroun</td><td class="cell-&gt;Kv{"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-NMDT"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-R_Qy"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Terminé</span></td></tr><tr id="29727f40-92fb-8033-94e7-dead180f20bc"><td class="cell-title"><a href="OceanStor%20%E2%80%93%20D%C3%A9ploiement%20des%20baies%20de%20stockage%20Huaw%2029727f4092fb803394e7dead180f20bc.html"><span class="icon">🚀</span> OceanStor – Déploiement des baies de stockage Huawei pour le SAN de  Production et l’archivage</a></td><td class="cell-AWGp"><span class="selected-value select-value-color-yellow">Communication</span><span class="selected-value select-value-color-red">Stockage</span><span class="selected-value select-value-color-blue">virtualisation</span></td><td class="cell-]]JQ"></td><td class="cell-~TaE"><mark class="highlight-yellow_background"><strong>MTN CAMEROUN.SA</strong></mark></td><td class="cell-sUpl"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-|p^j"></td><td class="cell-VAYk">Renforcer l’infrastructure de stockage d’<strong>MTN CAMEROUN </strong>en déployant deux nouvelles baies Huawei :<br/>• <strong>Huawei OceanStor 6800 All Flash</strong> pour les environnements de <strong>production haute performance</strong><br/>• <strong>Huawei OceanStor 9000</strong> pour la <strong>gestion de l’archivage</strong> à grande capacité<br/>Le projet vise à améliorer les performances, la résilience et la capacité globale de stockage, tout en assurant une intégration fluide dans l’environnement existant.</td><td class="cell-_dqe">Douala, Cameroun</td><td class="cell-&gt;Kv{"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-NMDT"></td><td class="cell-R_Qy"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Terminé</span></td></tr><tr id="29727f40-92fb-8014-8133-cb1fae743838"><td class="cell-title"><a href="Projet%20SAN%20Expansion%20%E2%80%93%20Extension%20de%20capacit%C3%A9%20sur%20b%2029727f4092fb80148133cb1fae743838.html"><span class="icon">🚀</span>Projet SAN Expansion – Extension de capacité sur baies VMAX10K</a></td><td class="cell-AWGp"><span class="selected-value select-value-color-yellow">Communication</span><span class="selected-value select-value-color-red">Stockage</span></td><td class="cell-]]JQ"></td><td class="cell-~TaE"><mark class="highlight-orange"><strong>MTN CAMEROUN</strong></mark></td><td class="cell-sUpl"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-|p^j"></td><td class="cell-VAYk"><br/>Étendre la capacité de stockage des <strong>baies Dell EMC VMAX10K</strong> dans l’environnement SAN de <strong>MTN Cameroun</strong>, afin de répondre à la croissance des besoins métiers et d’optimiser l’utilisation des pools de stockage existants. Le projet visait une <strong>expansion sans interruption</strong>, avec reconfiguration fine des composants internes.</td><td class="cell-_dqe">Douala, Cameroun</td><td class="cell-&gt;Kv{"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-NMDT"></td><td class="cell-R_Qy"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Terminé</span></td></tr><tr id="29727f40-92fb-8096-8f07-f34f944ea369"><td class="cell-title"><a href="Wallix%20Bastion%20%E2%80%93%20Refonte%20de%20l%E2%80%99infrastructure%20d%E2%80%99acc%2029727f4092fb80968f07f34f944ea369.html"><span class="icon">🚀</span>Wallix Bastion – Refonte de l’infrastructure d’accès sécurisé pour les prestataires externes</a></td><td class="cell-AWGp"><span class="selected-value select-value-color-green">IAM</span><span class="selected-value select-value-color-orange">PAM</span><span class="selected-value select-value-color-purple">WALLIX PAM</span></td><td class="cell-]]JQ"></td><td class="cell-~TaE"><mark class="highlight-orange">ORANGE CAMEROUN</mark></td><td class="cell-sUpl"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-|p^j"></td><td class="cell-VAYk"><br/>Moderniser la solution de <strong>gestion des accès à privilèges (PAM)</strong> pour les <strong>prestataires externes</strong> d’<strong>Orange Cameroun</strong>, en déployant la <strong>version 8 de Wallix Bastion</strong> et en intégrant le module <strong>Access Manager (AM) 2.1</strong> pour une <strong>interface centralisée</strong> de supervision et de gestion des accès. Le projet vise à renforcer la sécurité, améliorer la traçabilité, et faciliter l’administration des bastions.<br/><br/></td><td class="cell-_dqe">Douala, Cameroun</td><td class="cell-&gt;Kv{"><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLhGGzir5-pK4uRVlf_ttMcTCQbRQotFMuzmofplGUhQEoP0R9p=s100" class="icon user-icon"/>Vladimir Djameni</span></td><td class="cell-NMDT"></td><td class="cell-R_Qy"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Terminé</span></td></tr></tbody></table><br/><br/></div><figure id="29427f40-92fb-814d-a601-c61d62a4716b" class="link-to-page"><a href="29%2007%201989%2029427f4092fb814da601c61d62a4716b.html"><span class="icon">📨</span>29/07/1989 </a></figure></div></figure></div></div><hr id="29427f40-92fb-811f-805f-cea6c47bf2e5"/><p id="29727f40-92fb-80b3-b498-d18e9ed3f15a" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

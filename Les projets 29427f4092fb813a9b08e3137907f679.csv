@@ -1,0 +1,44 @@
+﻿Nom du projet,"Client ",Créée par,Date de début,Description,Lien du projet,Lieu,"Membre équipe projet ",Responsable du projet,Type de projet,État
+ABBA-ZDE/DMZ – Sécurisation des comptes à privilèges,ENEDIS,Vladimir Djameni,2 novembre 2023 → 2 mars 2024,"
+Renforcer la sécurité des comptes à privilèges sur les machines Windows situées en zone démilitarisée (ZDE/DMZ), via le déploiement d’une infrastructure PAM basée sur Wallix Bastion, dans une démarche Zero Trust. L’objectif principal : limiter les risques d’accès non autorisés et garantir une traçabilité exhaustive des actions administratives.
+
+",https://www.wallix.com/fr/produits/gestion-des-acces-a-privileges/,"Lyon, Auvergne-Rhône-Alpes, France",Vladimir Djameni,Vladimir Djameni,"IAM, PAM, WALLIX PAM",Terminé
+WAM SSO – Refonte de la plateforme d’authentification centralisée avec monitoring SafeKit,ORANGE CAMEOUN.SA,Vladimir Djameni,,"
+Refondre la plateforme SSO (Single Sign-On) basée sur Evidian Web Access Manager (WAM) pour Orange Cameroun, afin de centraliser et sécuriser l’authentification à l’ensemble des applications métiers (CRM, Vue360). Le projet intègre ADFS comme fournisseur d’identité (IdP) via SAML v2, et s’appuie sur le module SafeKit pour assurer la haute disponibilité, la réplication et le monitoring du cluster WAM",https://www.evidian.com/fr/produits/web-sso/web-access-manager-cas-d-usage/,"Douala, Cameroun",Vladimir Djameni,,"Communication, IAM, SSO",Terminé
+ABBA2-Sécurisation des accès TMA,ENEDIS,Vladimir Djameni,7 mars 2024 → 20 novembre 2024,"Mettre en place une solution robuste de sécurisation des accès pour les prestataires externes en Tierce Maintenance Applicative (TMA), garantissant un contrôle strict et granulaire des connexions vers les équipes internes de l’organisation.                                                     ",https://www.behance.net/gallery/234030257/Food-Delivery-Mobile-App-Quick-Fork?tracking_source=search_projects|app&l=48,"Lyon, Auvergne-Rhône-Alpes, France",Vladimir Djameni,Vladimir Djameni,"IAM, PAM, WALLIX PAM",Terminé
+"KPSA – Cluster Haute Disponibilité avec Pacemaker/Corosync                           ",ORANGE CAMEROUN.SA,Vladimir Djameni,,"
+
+Mettre en place une infrastructure Haute Disponibilité (HA) pour l’application KPSA (Kabira Provisioning and Service Activation), utilisée dans le secteur des télécommunications pour le provisioning des cartes SIM. Le projet vise à garantir la résilience du site de production et à construire un site de reprise (DR) en mode single node, assurant la continuité de service en cas de défaillance.
+
+
+",https://github.com/kouasseu/KPSA/tree/main,"Douala, Cameroun",Vladimir Djameni,Vladimir Djameni,"Communication, HA, Middleware",Terminé
+Kaabu Mobile – Plateforme de Commande Unifiée Multiservice,Orange Group/CAMEROUN,Vladimir Djameni,,"
+Concevoir et déployer Kaabu Mobile, une plateforme digitale multiservice et multidevice dédiée à la prise de commande unifiée. Elle centralise l’ensemble des processus commerciaux et techniques autour d’un catalogue d’offres unique, d’un référentiel client unifié, et d’un billing convergent, tout en intégrant les fonctions clés : vente, stock, encaissement, recouvrement et provisioning.
+
+",https://play.google.com/store/apps/details?id=com.orange.cm.kaabuplus&hl=fr_CH,"Douala, Cameroun",Vladimir Djameni,Vladimir Djameni,"Communication, HA, Middleware, infrastructure",Terminé
+" OPC – Orange Private Cloud",ORANGE GROUP,Vladimir Djameni,,"
+Participer à la mise en œuvre de la plateforme Orange Private Cloud (OPC), une infrastructure cloud privée destinée à héberger des services critiques pour les entités du groupe Orange. Le projet vise à garantir la scalabilité, la résilience et la sécurité des environnements virtualisés, tout en respectant les standards d’architecture cloud.
+
+",,"Douala, Cameroun",Vladimir Djameni,,"CLOUD, infrastructure",Terminé
+http://adc.sa/ – Refonte de l’infrastructure IT des Aéroports du Cameroun,ADC.SA,Vladimir Djameni,7 mai 2019 → 1 septembre 2019,"
+Moderniser l’infrastructure informatique des Aéroports du Cameroun (ADC.SA) en refondant les sites de production (Yaoundé) et de secours (Douala). L’objectif principal était d’assurer la résilience, la scalabilité, et la sécurisation des données, tout en facilitant la migration vers une architecture virtualisée et redondante.
+
+",,"Yaoundé, Cameroun",Vladimir Djameni,,"Communication, HA, PRA, infrastructure",Terminé
+AFA – Déploiement de l’infrastructure de stockage VMAX All Flash,Orange Cameroun,Vladimir Djameni,25 octobre 2018,"
+Mettre en place une infrastructure de stockage haute performance basée sur la technologie VMAX All Flash pour Orange Cameroun, afin de répondre aux besoins croissants en capacité, en rapidité d’accès aux données, et en résilience. Le projet visait également à étendre l’infrastructure de virtualisation existante pour supporter les charges critiques.
+
+",,"Douala, Cameroun",Vladimir Djameni,,"Communication, Stockage, infrastructure, virtualisation",Terminé
+Huawei Dorado – Modernisation du stockage avec baies All Flash NVMe,ORANGE CAMEROUN,Vladimir Djameni,,"
+Moderniser l’infrastructure de stockage d’Orange Cameroun (OCM) en déployant des baies Dorado All Flash NVMe, afin de remplacer les équipements en fin de vie (EOS) et de réduire la saturation des ressources existantes. Le projet vise une migration sans interruption, une intégration fluide dans l’environnement existant, et une montée en compétence des équipes locales.
+
+",,"Douala, Cameroun",Vladimir Djameni,Vladimir Djameni,"Migration, Stockage, virtualisation",Terminé
+" OceanStor – Déploiement des baies de stockage Huawei pour le SAN de  Production et l’archivage",MTN CAMEROUN.SA,Vladimir Djameni,,"Renforcer l’infrastructure de stockage d’MTN CAMEROUN en déployant deux nouvelles baies Huawei :
+• Huawei OceanStor 6800 All Flash pour les environnements de production haute performance
+• Huawei OceanStor 9000 pour la gestion de l’archivage à grande capacité
+Le projet vise à améliorer les performances, la résilience et la capacité globale de stockage, tout en assurant une intégration fluide dans l’environnement existant.",,"Douala, Cameroun",Vladimir Djameni,,"Communication, Stockage, virtualisation",Terminé
+Projet SAN Expansion – Extension de capacité sur baies VMAX10K,MTN CAMEROUN,Vladimir Djameni,,"
+Étendre la capacité de stockage des baies Dell EMC VMAX10K dans l’environnement SAN de MTN Cameroun, afin de répondre à la croissance des besoins métiers et d’optimiser l’utilisation des pools de stockage existants. Le projet visait une expansion sans interruption, avec reconfiguration fine des composants internes.",,"Douala, Cameroun",Vladimir Djameni,,"Communication, Stockage",Terminé
+Wallix Bastion – Refonte de l’infrastructure d’accès sécurisé pour les prestataires externes,ORANGE CAMEROUN,Vladimir Djameni,,"
+Moderniser la solution de gestion des accès à privilèges (PAM) pour les prestataires externes d’Orange Cameroun, en déployant la version 8 de Wallix Bastion et en intégrant le module Access Manager (AM) 2.1 pour une interface centralisée de supervision et de gestion des accès. Le projet vise à renforcer la sécurité, améliorer la traçabilité, et faciliter l’administration des bastions.
+
+",,"Douala, Cameroun",Vladimir Djameni,,"IAM, PAM, WALLIX PAM",Terminé
